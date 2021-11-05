@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cstring>
 using namespace std;
 
 class Product{
@@ -8,6 +9,19 @@ private:
     int mrp;
     int selling_price;
 public:
+    //Constructor
+    Product(){
+        cout<<"Inside Constructor"<<endl;
+    }
+    //Parameterised Constructor , Constructor overloading
+    Product(int id, char *n,int mrp,int selling_price){
+        this->id=id;
+        this->mrp=mrp;
+        this->selling_price=selling_price;
+        strcpy(name,n);
+
+    }
+
 //Setters
 
 void setmrp(int price){
